@@ -1,0 +1,109 @@
+/*
+ * -------------------------------------------------------------
+ *  
+ * File: _navigation.scss
+ * Project: Amoplex Technologies
+ * File Created: Saturday, 6th February 2021 11:04:36 am
+ * Author: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Last Modified: Saturday, 6th February 2021 11:04:36 am
+ * Modified By: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Copyright - 2021 Amoplex Technologies
+ *  
+ * -------------------------------------------------------------
+ */
+
+nav[data-element="nav"] {
+    clip-path: circle(24px at calc(100% - 34px) 54.00%);
+    background: darken($background, 2%);
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: clip-path .5s ease-in-out;
+    box-shadow: $shadow;
+    cursor: pointer;
+    &[data-open="true"] {
+        clip-path: circle(130% at 89.3% 54.00%);
+        cursor: auto;
+        ul .openNav span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 10px;
+            left: 2px;
+        }
+        ul .openNav span:nth-child(2) {
+            width: 0%;
+            opacity: 0;
+        }
+        ul .openNav span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 28px;
+            left: 2px;
+        }
+    }
+    &:not([data-open="true"]):hover .openNav span {
+        background: $primary;
+    }
+    ul {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        .openNav {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            width: 26px;
+            height: 40px;
+            outline: none;
+            &:hover span {
+                background: $primary;
+            }
+            span {
+                display: block;
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                background: rgba($color: $text, $alpha: .8);
+                border-radius: 2px;
+                opacity: 1;
+                left: 0;
+                transition: .25s ease-in-out;
+                &:nth-child(1) {
+                    top: 30%;
+                    transform-origin: left center;
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    transform-origin: left center;
+                }
+                &:nth-child(3) {
+                    top: 70%;
+                    transform-origin: left center;
+                }
+            }
+        }
+        .link {
+            margin-right: 10px;
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            fill: rgba($color: $text, $alpha: .8);
+            svg {
+                height: 20px;
+                width: 25px;
+            }
+            &:hover {
+                background: $background;
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+}

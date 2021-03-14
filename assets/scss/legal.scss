@@ -1,0 +1,56 @@
+/*
+ * -------------------------------------------------------------
+ *  
+ * File: legal.scss
+ * Project: Amoplex Technologies
+ * File Created: Friday, 5th February 2021 2:18:01 pm
+ * Author: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Last Modified: Friday, 5th February 2021 2:18:01 pm
+ * Modified By: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Copyright - 2021 Amoplex Technologies
+ *  
+ * -------------------------------------------------------------
+ */
+
+@import "imports/reset";
+@import "imports/vars";
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.4em;
+    color: $text;
+    background: $background;
+    h1 {
+        line-height: 2em;
+        margin-bottom: 1.25rem;
+        color: $primary;
+    }
+    h4,
+    strong {
+        color: $primary;
+        margin: 1.25rem 0;
+    }
+    p {
+        margin: .625rem 0;
+    }
+    .privacy p {
+        margin-left: 1.25rem;
+    }
+    a {
+        text-decoration: none;
+        color: $primary;
+        &:hover {
+            color: darken($primary, 5%);
+        }
+    }
+    ul {
+        margin: 1.25rem;
+    }
+}
+
+.text-wrapper {
+    width: 95vw;
+    max-width: 93.75rem;
+    margin: 5rem auto;
+}

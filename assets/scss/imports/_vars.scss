@@ -1,0 +1,20 @@
+/*
+ * -------------------------------------------------------------
+ *  
+ * File: _vars.scss
+ * Project: Amoplex Technologies
+ * Author: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Modified By: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Copyright - 2021 Amoplex Technologies
+ *  
+ * -------------------------------------------------------------
+ */
+
+$primary: #F3753A;
+$secondary: lighten($primary, 10%);
+$text: #fff;
+$background: #202124;
+$modalBackground: #232427;
+$shadow: 0 0 20px rgba($color: #000000, $alpha: 0.16);

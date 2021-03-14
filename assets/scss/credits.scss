@@ -1,0 +1,131 @@
+/*
+ * -------------------------------------------------------------
+ *  
+ * File: credits.scss
+ * Project: Amoplex Technologies
+ * File Created: Friday, 5th February 2021 3:31:14 pm
+ * Author: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Last Modified: Friday, 5th February 2021 3:31:14 pm
+ * Modified By: Lucas Schüller (lucas@amoplex.de)
+ * -----
+ * Copyright - 2021 Amoplex Technologies
+ *  
+ * -------------------------------------------------------------
+ */
+
+@import "imports/reset";
+@import "imports/vars";
+* {
+    transition: all .2s ease-in-out;
+}
+
+body {
+    background: $background;
+    color: $text;
+    font-family: "Montserrat", sans-serif;
+    padding: 100px 0;
+    overflow-x: hidden;
+}
+
+section {
+    width: 90vw;
+    margin: 0 auto;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h1 {
+        font-size: 55px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: $primary;
+        position: relative;
+        transform: translateX(100px);
+        @media screen and (max-width: 978px) {
+            text-align: center;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: -100px;
+            width: 80px;
+            height: 80px;
+            background: url("../img/favicon.ico");
+            background-size: cover;
+        }
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-left: -20px;
+        li {
+            width: 100%;
+            max-width: 390px;
+            border-radius: 12px;
+            height: 130px;
+            background: lighten($background, 2%);
+            margin: 20px;
+            padding: 30px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: $shadow;
+            h3 {
+                font-weight: 300;
+                color: $primary;
+            }
+            h2 {
+                text-transform: uppercase;
+                font-size: 25px;
+            }
+            a {
+                $size: 60px;
+                width: $size;
+                height: $size;
+                border-radius: 12px;
+                box-shadow: $shadow;
+                background: $background;
+                display: grid;
+                place-content: center;
+                clip-path: circle(30px at 50% 50%);
+                &:hover {
+                    clip-path: circle(100% at 50% 50%);
+                    fill: $primary;
+                    svg {
+                        fill: $primary;
+                    }
+                }
+                svg {
+                    width: 20px;
+                    fill: $text;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 978px) {
+        padding-top: 50px;
+        h1 {
+            transform: none;
+            &::before {
+                top: -80px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        ul {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            li {
+                margin: 20px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "project": "Diversity Calculator",
+    "github": "https://github.com",
+    "nextProject": "next",
+    "previousProject": "https://amoplex.de",
+    "credits": [{
+            "type": "Avatars",
+            "name": "Freepick",
+            "link": "https://www.freepik.com"
+        },
+        {
+            "type": "Icons",
+            "name": "FontAwesome",
+            "link": "https://fontawesome.com/"
+        },
+        {
+            "type": "API",
+            "name": "Diversitydata",
+            "link": "https://diversitydata.io/"
+        }
+    ]
+}
